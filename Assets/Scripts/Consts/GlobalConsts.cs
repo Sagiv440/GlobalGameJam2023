@@ -4,21 +4,11 @@ public class GlobalConsts
     public const float PLAYER_AIR_DRAG = 1f;
 }
 
-public class JOBS
+public enum T_TYPES
 {
-    public const int WOOD = 0;
-    public const int AXE = 1;
-    public const int STOEN = 2;
-    public const int OLTAR = 3;
-    public const int BOOM = 4;
-    public const int IDLE = 5;
-}
-public enum RESORCES
-{
-    WOOD = 0,
-    AXE = 1,
-    STOEN = 2,
-    OLTAR = 3
+    VOID = 0,
+    SPEED = 1,
+    ARMOR = 2,
 }
 public enum GAME_STATE
 {
