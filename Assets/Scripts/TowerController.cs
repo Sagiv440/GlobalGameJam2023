@@ -9,6 +9,7 @@ public class TowerController : MonoBehaviour
     [SerializeField] private float Damage_Amount;
 
     [SerializeField] private float AttackTime = 1.2f;
+    [SerializeField] private float TowerHight = 4f;
 
     [SerializeField] private GameObject Target_0 = null;
 
@@ -38,7 +39,7 @@ public class TowerController : MonoBehaviour
         foreach (GameObject cr in gm.Charecters)
         {
             //Is in Range
-            if (CommonFunctions.IsClose(cr.transform.position, this.transform.position, AttackRadius) == true)
+            if (CommonFunctions.IsClose(cr.transform.position, this.transform.position, AttackRadius, TowerHight) == true)
             {
                 if (Target_0 == null)
                 {
