@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thank you for playing awer game \nGlobal  Game Jam 2023
+  m_text: Thank you for playing our  game \nGlobal  Game Jam 2023
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
   m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
