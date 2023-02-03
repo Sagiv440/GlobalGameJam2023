@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
             case GAME_STATE.END:
                 if (st.OnEvent())
                 {
+                    GameStateMangment.talets = gm.Serviving_Characters;
                     gm.printServivers();
                 }
                 st.Update(true);
