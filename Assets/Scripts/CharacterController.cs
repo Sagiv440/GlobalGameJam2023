@@ -6,34 +6,33 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private GameManager gm;
+
+    public float speed = 1f;
+    public float health = 1f;
+    public bool evasionEnabled = false;
+    public float evasionModifier = 1f;
+    public bool flyEnabled = false;
+    public bool attackEnabled = false;
+    public bool immuneEnabled = false;
+
     [SerializeField] public NavMeshAgent agent;
     [SerializeField] private GameObject Target_0;
 
-    [SerializeField] public float Speed = 3.5f;
     [SerializeField] private float SpottingRadiuse = 2.0f;
     [SerializeField] private float AttackTime;
     [SerializeField] private float Damage_Amount;
 
-    [SerializeField] public List<Talent> talent;
-
     private Timer AttackTimer;
 
-    private void talentLog()
+    public void SetAtributes(talents tln)
     {
-        
-        foreach(Talent t in talent)
-        {
-            Debug.Log("charecter: "+this.ToString()+" Talent type: " + t.Get_Type());
-        }
-    }
-
-    private void ApplyTalents()
-    {
-
-        foreach (Talent t in talent)
-        {
-            t.Apply_Talent();
-        }
+        speed = tln.speed;
+        health = tln.health;
+        evasionEnabled = tln.evasionEnabled;
+        evasionModifier = tln.evasionModifier;
+        flyEnabled = tln.flyEnabled;
+        attackEnabled = tln.attackEnabled;
+        immuneEnabled = tln.attackEnabled;
     }
 
     // Start is called before the first frame update
@@ -42,18 +41,29 @@ public class CharacterController : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
 
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = Speed;
+        agent.speed = speed;
 
         Target_0 = null;
 
         AttackTimer = new Timer(AttackTime);
         AttackTimer.ActivateTimer();
-        talent = new List<Talent>();
-        talent.Add(new Speed(gm, this, 120.0f));
-        talent.Add(new Armor(gm, this));
+        Random.InitState((int)Time.unscaledTime);
+    }
 
-        talentLog();
-        ApplyTalents();
+    public void TackDamage(float damage)
+    {
+        float car_dmg = damage;
+        if(evasionEnabled == true)
+        {
+            float rand = Random.Range(100.0f, 0.0f);
+            if(rand <= evasionModifier)
+            {
+                Debug.Log("Attack missed");
+                car_dmg = 0.0f;
+            }
+        }
+
+        this.GetComponent<CharacterController>().TackDamage(damage);
     }
 
     void Attack_logic()
@@ -84,19 +94,22 @@ public class CharacterController : MonoBehaviour
 
     void ScanTarggets()
     {
-        foreach (GameObject cr in gm.Towers)
+        if (attackEnabled == true)
         {
-            //Is in Range
-            if (CommonFunctions.IsClose(cr.transform.position, this.transform.position, SpottingRadiuse) == true)
+            foreach (GameObject cr in gm.Towers)
             {
-                if (Target_0 == null)
+                //Is in Range
+                if (CommonFunctions.IsClose(cr.transform.position, this.transform.position, SpottingRadiuse) == true)
                 {
-                    Target_0 = cr;
+                    if (Target_0 == null)
+                    {
+                        Target_0 = cr;
+                    }
                 }
-            }
-            else if (cr == Target_0)
-            {
-                Target_0 = null;
+                else if (cr == Target_0)
+                {
+                    Target_0 = null;
+                }
             }
         }
     }

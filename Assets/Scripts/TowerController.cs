@@ -61,7 +61,7 @@ public class TowerController : MonoBehaviour
                 //Fire
 
                 Debug.Log("Attack Target");
-                Target_0.GetComponent<Status>().TackDamage(Damage_Amount);
+                Target_0.GetComponent<CharacterController>().TackDamage(Damage_Amount);
                 AttackTimer.SetTimerTime(AttackTime);
                 AttackTimer.ActivateTimer();
 

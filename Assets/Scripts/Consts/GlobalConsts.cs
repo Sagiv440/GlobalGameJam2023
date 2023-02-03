@@ -4,6 +4,17 @@ public class GlobalConsts
     public const float PLAYER_AIR_DRAG = 1f;
 }
 
+public struct talents
+{
+    public float speed;
+    public float health;
+    public bool evasionEnabled;
+    public float evasionModifier;
+    public bool flyEnabled;
+    public bool attackEnabled;
+    public bool immuneEnabled;
+}
+
 public enum T_TYPES
 {
     VOID = 0,

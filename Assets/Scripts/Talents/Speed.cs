@@ -12,8 +12,4 @@ public class Speed : Talent
 
     override public T_TYPES Get_Type() { return T_TYPES.SPEED; }
 
-    override public void Apply_Talent() 
-    {
-        this.chc.agent.speed = this.chc.Speed + this.chc.Speed * (Speed_Modifer/100.0f);
-    }
 }
