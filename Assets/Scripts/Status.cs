@@ -15,8 +15,7 @@ public class Status : MonoBehaviour
     private void Die()
     {
         Debug.Log("Is Dead: " + this.ToString());
-
-        gm.RemoveCaracters(this.gameObject);
+        gm.Remove(this.gameObject);
         Destroy(this.gameObject);
     }
 

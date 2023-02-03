@@ -19,7 +19,6 @@ public class TowerController : MonoBehaviour
     {
         AttackTimer = new Timer(AttackTime);
         AttackTimer.ActivateTimer();
-
     }
 
     private void update_Timers()
@@ -59,6 +58,8 @@ public class TowerController : MonoBehaviour
         {
             if (AttackTimer.IsTimerEnded() == true)
             {
+                //Fire
+
                 Debug.Log("Attack Target");
                 Target_0.GetComponent<Status>().TackDamage(Damage_Amount);
                 AttackTimer.SetTimerTime(AttackTime);
