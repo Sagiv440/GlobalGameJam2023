@@ -41,7 +41,7 @@ public class CharacterController : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
 
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
+        //agent.speed = speed;
 
         Target_0 = null;
 
@@ -63,7 +63,7 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-        this.GetComponent<CharacterController>().TackDamage(damage);
+        this.GetComponent<Status>().TackDamage(damage);
     }
 
     void Attack_logic()

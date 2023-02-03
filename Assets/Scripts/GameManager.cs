@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        this.tag = Tags.GAME_MANAGER;
         ResetGameManager();
     }
 
