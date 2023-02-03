@@ -73,7 +73,10 @@ public class TowerController : MonoBehaviour
 
     void Update()
     {
-        ScanForTargets();
-        AttackTarget();
+        if (gm.gameState == GAME_STATE.PLAY)
+        {
+            ScanForTargets();
+            AttackTarget();
+        }
     }
 }

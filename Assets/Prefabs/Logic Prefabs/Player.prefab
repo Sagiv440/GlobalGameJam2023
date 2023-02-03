@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7220460958b5f4fb05720f1695ad57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sponers: {fileID: 8548040940825329244, guid: d8813c80cd25d85439de3e6ffdb1c60e, type: 3}
+  Sponers: {fileID: 145396553759775640, guid: 3f0e63019ffe27340b16805d4024a776, type: 3}
   sponeDelay: 2
   ArmyCount: 5

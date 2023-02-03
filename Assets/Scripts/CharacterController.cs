@@ -34,6 +34,19 @@ public class CharacterController : MonoBehaviour
         immuneEnabled = tln.attackEnabled;
     }
 
+    public talents GetAtributes()
+    {
+        talents tln = new talents();
+        tln.speed = speed;
+        tln.health = health;
+        tln.evasionEnabled = evasionEnabled;
+        tln.evasionModifier = evasionModifier;
+        tln.flyEnabled = flyEnabled;
+        tln.attackEnabled = attackEnabled;
+        tln.attackEnabled = attackEnabled;
+        return tln;
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -91,6 +104,17 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    void Retched_End()
+    {
+        if (CommonFunctions.IsClose(gm.End_Point.transform.position, this.transform.position, agent.stoppingDistance) == true)
+        {
+            Debug.Log("Uint: " + this.ToString() + " Has reished the End of the level");
+            gm.Serviving_Characters.Add(GetAtributes());
+            gm.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
 
     void ScanTarggets()
     {
@@ -121,6 +145,7 @@ public class CharacterController : MonoBehaviour
         {
             Attack_logic();
             ScanTarggets();
+            Retched_End();
         }
     }
 }
