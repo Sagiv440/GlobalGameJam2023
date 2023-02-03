@@ -10,6 +10,13 @@ public class ChangeCharacterButton : MonoBehaviour
 
     public Character character;
 
+    private AllAttributes allAttributes;
+
+    public void Awake()
+    {
+        allAttributes = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
+    }
+
     public void OnClick()
     {
         Debug.Log("Changing character...");
@@ -30,5 +37,7 @@ public class ChangeCharacterButton : MonoBehaviour
             var attribute = Object.Instantiate(possibleAttributes[attributeIndex], attributeLocations[i].transform);
             character.attributes.Add(attribute);
         }
+        // Update AllAttributes
+        allAttributes.ApplyAttributes();
     }
 }

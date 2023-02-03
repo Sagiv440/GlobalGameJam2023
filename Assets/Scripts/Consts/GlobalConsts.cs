@@ -12,6 +12,8 @@ public struct talents
     public float evasionModifier;
     public bool flyEnabled;
     public bool attackEnabled;
+    public float attackDamage;
+    public float attackTime;
     public bool immuneEnabled;
 }
 
@@ -25,6 +27,7 @@ public enum GAME_STATE
 {
     VIEW = 0,
     PLAY = 1,
-    END = 2,
+    FINISH_SPAWN = 2,
+    END = 3,
 }
 

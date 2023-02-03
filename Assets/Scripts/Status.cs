@@ -14,14 +14,14 @@ public class Status : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Is Dead: " + this.ToString());
+        // Debug.Log("Is Dead: " + this.ToString());
         gm.Remove(this.gameObject);
         Destroy(this.gameObject);
     }
 
     public void TackDamage(float damage)
     {
-        Debug.Log("Taking Damage");
+        // Debug.Log("Taking Damage");
         Helth -= damage;
         if (Helth <= 0.0f)
         {

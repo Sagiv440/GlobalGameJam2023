@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private GameManager gm;
+    private AllAttributes attributesHolder;
 
     [SerializeField] public GameObject Sponers;
-    [SerializeField] private float sponeDelay = 2.0f;
-    [SerializeField] private int ArmyCount = 5;
+    [SerializeField] private float sponeDelay = 1.0f;
+    [SerializeField] private int ArmyCount = 15;
+    [SerializeField] private int baseArmyCount = 15;
 
     private SmartSwitch st;
 
@@ -18,6 +20,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
+        try
+        {
+            attributesHolder = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
+        }
+        catch {}
         SponeTimer = new Timer(sponeDelay);
         SponeTimer.ActivateTimer();
 
@@ -26,6 +33,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (ArmyCount == 0 && gm.gameState == GAME_STATE.PLAY)
+            {
+                gm.gameState = GAME_STATE.FINISH_SPAWN;
+            }
         switch(gm.gameState)
         {
             case GAME_STATE.VIEW:
@@ -35,8 +46,12 @@ public class PlayerController : MonoBehaviour
                 if (SponeTimer.IsTimerEnded() == true && ArmyCount > 0)
                 {
                     //Fire
-
-                    Instantiate(Sponers, gm.Start_Point.transform);
+                    var character = Instantiate(Sponers, gm.Start_Point.transform);
+                    if (attributesHolder != null)
+                    {
+                        attributesHolder.ApplyAttributes();
+                        character.GetComponent<CharacterController>().SetAtributes(new talents() { speed = attributesHolder.speed, health = attributesHolder.health, evasionEnabled = attributesHolder.evasionEnabled, evasionModifier = attributesHolder.evasionModifier, flyEnabled = attributesHolder.flyEnabled, attackEnabled = attributesHolder.attackEnabled, attackDamage = attributesHolder.attackDamage, attackTime = attributesHolder.attackTime, immuneEnabled = attributesHolder.immuneEnabled });
+                    }
                     SponeTimer.SetTimerTime(sponeDelay);
                     SponeTimer.ActivateTimer();
                     ArmyCount--;
@@ -50,6 +65,9 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
 
+            case GAME_STATE.FINISH_SPAWN:
+                break;
+
             case GAME_STATE.END:
                 if (st.OnEvent())
                 {
@@ -61,4 +79,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetGameStatePlay()
+    {
+        if (gm.gameState == GAME_STATE.FINISH_SPAWN || gm.gameState == GAME_STATE.VIEW)
+        {
+            ArmyCount = baseArmyCount;
+            gm.gameState = GAME_STATE.PLAY;
+        }
+    }
 }
