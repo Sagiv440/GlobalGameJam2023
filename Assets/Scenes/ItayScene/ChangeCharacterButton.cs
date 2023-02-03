@@ -12,10 +12,12 @@ public class ChangeCharacterButton : MonoBehaviour
 
     public void OnClick()
     {
+        Debug.Log("Changing character...");
         // Clear stats
         for (int i = 0; i < 5; i++)
         {
             // Destroy (all) children
+            character.attributes.Clear();
             for (int j = attributeLocations[i].transform.childCount - 1; j >= 0; j--)
             {
                 Object.Destroy(attributeLocations[i].transform.GetChild(j).gameObject);
