@@ -26,12 +26,17 @@ public class CharacterController : MonoBehaviour
     public void SetAtributes(talents tln)
     {
         speed = tln.speed;
+        agent.speed = speed;
         health = tln.health;
         evasionEnabled = tln.evasionEnabled;
         evasionModifier = tln.evasionModifier;
         flyEnabled = tln.flyEnabled;
         attackEnabled = tln.attackEnabled;
         immuneEnabled = tln.attackEnabled;
+        Damage_Amount = tln.attackDamage;
+        AttackTime = tln.attackTime;
+        agent.speed = speed;
+        GetComponent<Status>().Helth = health;
     }
 
     public talents GetAtributes()
@@ -53,12 +58,37 @@ public class CharacterController : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
         gm.Charecters.Add(this.gameObject);
         agent = GetComponent<NavMeshAgent>();
-        //agent.speed = speed;
 
         Target_0 = null;
         AttackTimer = new Timer(AttackTime);
         AttackTimer.ActivateTimer();
         Random.InitState((int)Time.unscaledTime);
+
+        // Cancel Turn [1]
+        // agent.updateRotation = false;
+    }
+
+
+    void LateUpdate()
+    {
+        // Cancel Turn [2]
+
+        // FaceTarget();
+
+        //// if (agent.velocity.sqrMagnitude > Mathf.Epsilon)
+        //// {
+        ////     // transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);
+        ////     // transform.rotation = Quaternion.LookRotation(agent.steeringTarget.normalized, Vector3.up);
+        //// }
+    }
+
+    void FaceTarget()
+    {
+        var turnTowardNavSteeringTarget = agent.steeringTarget;
+     
+        Vector3 direction = (turnTowardNavSteeringTarget - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10);
     }
 
 
@@ -82,25 +112,16 @@ public class CharacterController : MonoBehaviour
     {
         if(Target_0 != null)
         {
-            agent.SetDestination(Target_0.transform.position);
-            if(CommonFunctions.IsClose(Target_0.transform.position, this.transform.position, agent.stoppingDistance))
+            if (AttackTimer.IsTimerEnded() == true)
             {
-                if (AttackTimer.IsTimerEnded() == true)
-                {
-                    //Fire
+                //Fire
+                // Debug.Log("Attack Tower: " + Target_0);
+                Target_0.GetComponent<Status>().TackDamage(Damage_Amount);
+                AttackTimer.SetTimerTime(AttackTime);
+                AttackTimer.ActivateTimer();
 
-                    Debug.Log("Attack Tower: "+Target_0);
-                    Target_0.GetComponent<Status>().TackDamage(Damage_Amount);
-                    AttackTimer.SetTimerTime(AttackTime);
-                    AttackTimer.ActivateTimer();
-
-                }
-                AttackTimer.SubtractTimerByValue(Time.deltaTime);
             }
-        }
-        else
-        {
-            agent.SetDestination(gm.End_Point.transform.position);
+            AttackTimer.SubtractTimerByValue(Time.deltaTime);
         }
     }
 
@@ -120,6 +141,7 @@ public class CharacterController : MonoBehaviour
     {
         if (attackEnabled == true)
         {
+            Target_0 = null;
             foreach (GameObject cr in gm.Towers)
             {
                 //Is in Range
@@ -128,11 +150,8 @@ public class CharacterController : MonoBehaviour
                     if (Target_0 == null)
                     {
                         Target_0 = cr;
+                        break;
                     }
-                }
-                else if (cr == Target_0)
-                {
-                    Target_0 = null;
                 }
             }
         }
@@ -141,11 +160,13 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gm.gameState == GAME_STATE.PLAY)
+        if(gm.gameState == GAME_STATE.PLAY || gm.gameState == GAME_STATE.FINISH_SPAWN)
         {
-            Attack_logic();
+            
             ScanTarggets();
             Retched_End();
+            Attack_logic();
+            agent.SetDestination(gm.End_Point.transform.position);
         }
     }
 }

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackRadius: 4
   Damage_Amount: 10
-  AttackTime: 0.5
+  AttackTime: 0.25
   TowerHight: 4
   Target_0: {fileID: 0}
 --- !u!114 &1616544950625690056

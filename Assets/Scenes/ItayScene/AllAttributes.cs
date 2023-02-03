@@ -9,11 +9,13 @@ public class AllAttributes : Character
     public void ApplyAttributes()
     {
         ResetAttributes();
+        attributes.Clear();
         foreach (var parent in parents)
         {
             foreach (var attribute in parent.attributes)
             {
                 attribute.GetComponent<Attribute>().Apply(this.gameObject);
+                attributes.Add(attribute);
             }
             
         }

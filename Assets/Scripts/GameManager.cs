@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] public GameObject End_Point;
     [SerializeField] public GameObject Start_Point;
+    [SerializeField] public GameObject playerController;
     [SerializeField] public GAME_STATE gameState = GAME_STATE.PLAY;
 
     [SerializeField] public List<GameObject> Charecters;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         this.tag = Tags.GAME_MANAGER;
         Start_Point = GameObject.FindGameObjectWithTag(Tags.STARTPOINT);
         End_Point = GameObject.FindGameObjectWithTag(Tags.ENDPOINT);
+        playerController = GameObject.FindGameObjectWithTag(Tags.PLAYER);
         ResetGameManager();
     }
 

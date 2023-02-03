@@ -9,6 +9,6 @@ public class EvasionPlus : Attribute
         if (!character.GetComponent<Character>().evasionEnabled)
             character.GetComponent<Character>().evasionEnabled = true;
         else
-            character.GetComponent<Character>().evasionModifier /= 2;
+            character.GetComponent<Character>().evasionModifier *= 1.5f;
     }
 }

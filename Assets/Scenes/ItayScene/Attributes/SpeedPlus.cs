@@ -6,6 +6,6 @@ public class SpeedPlus : Attribute
 {
     override public void Apply(GameObject character)
     {
-        character.GetComponent<Character>().speed *= 2;
+        character.GetComponent<Character>().speed *= 1.25f;
     }
 }

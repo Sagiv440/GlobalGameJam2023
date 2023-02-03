@@ -60,8 +60,7 @@ public class TowerController : MonoBehaviour
             if (AttackTimer.IsTimerEnded() == true)
             {
                 //Fire
-
-                Debug.Log("Attack Target");
+                // Debug.Log("Attack Target");
                 Target_0.GetComponent<CharacterController>().TackDamage(Damage_Amount);
                 AttackTimer.SetTimerTime(AttackTime);
                 AttackTimer.ActivateTimer();
