@@ -32,7 +32,7 @@ public class CharacterController : MonoBehaviour
         evasionModifier = tln.evasionModifier;
         flyEnabled = tln.flyEnabled;
         attackEnabled = tln.attackEnabled;
-        immuneEnabled = tln.attackEnabled;
+        immuneEnabled = tln.immuneEnabled;
         Damage_Amount = tln.attackDamage;
         AttackTime = tln.attackTime;
         agent.speed = speed;
@@ -48,7 +48,9 @@ public class CharacterController : MonoBehaviour
         tln.evasionModifier = evasionModifier;
         tln.flyEnabled = flyEnabled;
         tln.attackEnabled = attackEnabled;
-        tln.attackEnabled = attackEnabled;
+        tln.immuneEnabled = immuneEnabled;
+        tln.attackDamage = Damage_Amount;
+        tln.attackTime = AttackTime;
         return tln;
     }
 

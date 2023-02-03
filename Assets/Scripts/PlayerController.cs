@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private SmartSwitch st;
 
     private Timer SponeTimer;
+    
 
 
     private void Awake()
@@ -23,12 +24,19 @@ public class PlayerController : MonoBehaviour
         try
         {
             attributesHolder = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
+            attributesHolder.SetAtributes(GameStateMangment.tln);
         }
         catch {}
         SponeTimer = new Timer(sponeDelay);
         SponeTimer.ActivateTimer();
 
         st = new SmartSwitch(false);
+    }
+
+    private void Start()
+    {
+        if(GameStateMangment.game_state == GAME_STATE.PLAY)
+            SetGameStatePlay();
     }
 
     private void Update()

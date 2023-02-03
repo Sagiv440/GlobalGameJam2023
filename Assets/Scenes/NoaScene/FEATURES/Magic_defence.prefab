@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6168181651435041084}
   - component: {fileID: 7319538151566764220}
   - component: {fileID: 1137228441121044521}
-  - component: {fileID: 933831604753284976}
   m_Layer: 0
   m_Name: magic_defence
   m_TagString: Untagged
@@ -77,18 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &933831604753284976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274332198146702290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce566916b454ff4ea5e70559687c7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7316793152579557539
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8261270424236483293}
+  - component: {fileID: 6418154803680027252}
   m_Layer: 0
   m_Name: Magic_defence
   m_TagString: Untagged
@@ -121,3 +109,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6418154803680027252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7316793152579557539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce566916b454ff4ea5e70559687c7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
