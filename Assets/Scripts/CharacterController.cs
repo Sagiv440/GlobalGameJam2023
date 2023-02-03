@@ -17,12 +17,9 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] public NavMeshAgent agent;
     [SerializeField] private GameObject Target_0;
-
     [SerializeField] private float SpottingRadiuse = 2.0f;
     [SerializeField] private float AttackTime;
     [SerializeField] private float Damage_Amount;
-
-    [SerializeField] private int sponeCount = 3;
 
     private Timer AttackTimer;
 
@@ -41,7 +38,7 @@ public class CharacterController : MonoBehaviour
     void Awake()
     {
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
-
+        gm.Charecters.Add(this.gameObject);
         agent = GetComponent<NavMeshAgent>();
         //agent.speed = speed;
 
@@ -120,7 +117,10 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack_logic();
-        ScanTarggets();
+        if(gm.gameState == GAME_STATE.PLAY)
+        {
+            Attack_logic();
+            ScanTarggets();
+        }
     }
 }

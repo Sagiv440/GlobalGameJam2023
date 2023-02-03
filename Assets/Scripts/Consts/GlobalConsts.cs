@@ -23,7 +23,7 @@ public enum T_TYPES
 }
 public enum GAME_STATE
 {
-    START = 0,
+    VIEW = 0,
     PLAY = 1,
     END = 2,
 }

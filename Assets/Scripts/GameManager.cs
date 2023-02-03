@@ -6,8 +6,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] public GameObject End_Point;
     [SerializeField] public GameObject Start_Point;
+    [SerializeField] public GAME_STATE gameState = GAME_STATE.PLAY;
+
     [SerializeField] public List<GameObject> Charecters;
     [SerializeField] public List<GameObject> Towers;
+
 
     private List<GameObject> setCharList(string tag)
     {

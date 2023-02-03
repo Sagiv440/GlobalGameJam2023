@@ -22,17 +22,28 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (SponeTimer.IsTimerEnded() == true && ArmyCount > 0)
+        switch(gm.gameState)
         {
-            //Fire
+            case GAME_STATE.VIEW:
+                break;
 
-            gm.Charecters.Add(Instantiate(Sponers, gm.Start_Point.transform));
-            SponeTimer.SetTimerTime(sponeDelay);
-            SponeTimer.ActivateTimer();
-            ArmyCount--;
+            case GAME_STATE.PLAY:
+                if (SponeTimer.IsTimerEnded() == true && ArmyCount > 0)
+                {
+                    //Fire
 
+                    Instantiate(Sponers, gm.Start_Point.transform);
+                    SponeTimer.SetTimerTime(sponeDelay);
+                    SponeTimer.ActivateTimer();
+                    ArmyCount--;
+
+                }
+                SponeTimer.SubtractTimerByValue(Time.deltaTime);
+                break;
+
+            case GAME_STATE.END:
+                break;
         }
-        SponeTimer.SubtractTimerByValue(Time.deltaTime);
     }
 
 }
