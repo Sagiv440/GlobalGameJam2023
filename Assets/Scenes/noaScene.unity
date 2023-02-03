@@ -1061,7 +1061,6 @@ GameObject:
   - component: {fileID: 517238463}
   - component: {fileID: 517238462}
   - component: {fileID: 517238464}
-  - component: {fileID: 517238465}
   m_Layer: 0
   m_Name: AllAttributes
   m_TagString: Untagged
@@ -1089,9 +1088,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
   parents:
   - {fileID: 2048618054}
   - {fileID: 1855518708}
@@ -1113,18 +1109,6 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &517238464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517238461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185cf342e46fe6d4291dae10b4339882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &517238465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2210,9 +2194,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
 --- !u!114 &912635766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3438,9 +3419,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
 --- !u!114 &1459345018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3821,9 +3799,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
 --- !u!114 &1684518426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4461,9 +4436,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
 --- !u!114 &1855518709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4677,7 +4649,7 @@ MonoBehaviour:
   speed: 1
   destination_right: {x: 640, y: 125, z: 0}
   destination_left: {x: -340, y: 125, z: 0}
-  center: {x: 230.3, y: 125, z: 0}
+  center: {x: 255, y: 125, z: 0}
   move: center
 --- !u!1 &1939768862
 GameObject:
@@ -5052,9 +5024,6 @@ MonoBehaviour:
   flyEnabled: 0
   attackEnabled: 0
   immuneEnabled: 0
-  firstFly: 0
-  firstAttack: 0
-  firstImmune: 0
 --- !u!1 &2111709270
 GameObject:
   m_ObjectHideFlags: 0
