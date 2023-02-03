@@ -7,6 +7,8 @@ TagManager:
   - GameManager
   - Characters
   - Towers
+  - ST
+  - ET
   layers:
   - Default
   - TransparentFX

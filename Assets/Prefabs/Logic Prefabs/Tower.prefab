@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackRadius: 4
-  Damage_Amount: 5
+  Damage_Amount: 10
   AttackTime: 0.5
   Target_0: {fileID: 0}
 --- !u!114 &5063481596551216599

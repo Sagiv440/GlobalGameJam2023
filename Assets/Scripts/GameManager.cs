@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] public GameObject target;
+    [SerializeField] public GameObject End_Point;
+    [SerializeField] public GameObject Start_Point;
     [SerializeField] public List<GameObject> Charecters;
     [SerializeField] public List<GameObject> Towers;
 
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         this.tag = Tags.GAME_MANAGER;
+        Start_Point = GameObject.FindGameObjectWithTag(Tags.STARTPOINT);
+        End_Point = GameObject.FindGameObjectWithTag(Tags.ENDPOINT);
         ResetGameManager();
     }
 

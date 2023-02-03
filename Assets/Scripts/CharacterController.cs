@@ -22,6 +22,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float AttackTime;
     [SerializeField] private float Damage_Amount;
 
+    [SerializeField] private int sponeCount = 3;
+
     private Timer AttackTimer;
 
     public void SetAtributes(talents tln)
@@ -44,11 +46,11 @@ public class CharacterController : MonoBehaviour
         //agent.speed = speed;
 
         Target_0 = null;
-
         AttackTimer = new Timer(AttackTime);
         AttackTimer.ActivateTimer();
         Random.InitState((int)Time.unscaledTime);
     }
+
 
     public void TackDamage(float damage)
     {
@@ -88,9 +90,10 @@ public class CharacterController : MonoBehaviour
         }
         else
         {
-            agent.SetDestination(gm.target.transform.position);
+            agent.SetDestination(gm.End_Point.transform.position);
         }
     }
+
 
     void ScanTarggets()
     {
