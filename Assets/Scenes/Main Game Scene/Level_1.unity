@@ -197,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2707,7 +2707,7 @@ PrefabInstance:
     - target: {fileID: 1287107555306031411, guid: 0c8d26566840e9843a88c540158b0cdd,
         type: 3}
       propertyPath: gameState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1287107555306031411, guid: 0c8d26566840e9843a88c540158b0cdd,
         type: 3}

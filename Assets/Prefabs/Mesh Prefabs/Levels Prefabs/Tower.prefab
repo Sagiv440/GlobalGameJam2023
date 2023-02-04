@@ -54,6 +54,7 @@ MonoBehaviour:
   AttackTime: 0.25
   TowerHight: 4
   Target_0: {fileID: 0}
+  Projectile: {fileID: 4215776351694593927}
 --- !u!114 &1616544950625690056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +321,12 @@ PrefabInstance:
 --- !u!4 &4215776351164771573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1666696156930147674, guid: c1c88344b12ea194b984f03f4a29c0bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3287690484599728559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4215776351694593927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666696156400334376, guid: c1c88344b12ea194b984f03f4a29c0bc,
     type: 3}
   m_PrefabInstance: {fileID: 3287690484599728559}
   m_PrefabAsset: {fileID: 0}

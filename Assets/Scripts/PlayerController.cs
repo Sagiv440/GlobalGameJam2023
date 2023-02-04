@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     private GameManager gm;
     private AllAttributes attributesHolder;
+
+    [SerializeField] private TextMeshProUGUI GameOver;
 
     [SerializeField] public GameObject Sponers;
     [SerializeField] private float sponeDelay = 1.0f;
@@ -18,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private SmartSwitch st;
 
     private Timer SponeTimer;
-    
+    private Timer EndGameTimer;
+
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
@@ -29,6 +33,9 @@ public class PlayerController : MonoBehaviour
         catch {}
         SponeTimer = new Timer(sponeDelay);
         SponeTimer.ActivateTimer();
+
+        EndGameTimer = new Timer(4.0f);
+        EndGameTimer.ActivateTimer();
 
         st = new SmartSwitch(false);
     }
@@ -74,7 +81,17 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case GAME_STATE.END:
-                if (st.OnEvent())
+                GameOver.color = new Color(1, 1, 1, EndGameTimer.GetCurrentTime());
+                if (gm.Serviving_Characters.Count > 0)
+                {
+                    GameOver.text = "Good Work!";
+                }
+                else
+                {
+                    GameOver.text = "Game Over!";
+                }
+                
+                if (EndGameTimer.IsTimerEnded())
                 {
                     if (gm.Serviving_Characters.Count != 0)
                     {
@@ -87,8 +104,8 @@ public class PlayerController : MonoBehaviour
                     {
                         SceneManager.LoadScene("CreditScene");
                     }
-
                 }
+                EndGameTimer.SubtractTimerByValue(Time.deltaTime);
                 st.Update(true);
                 break;
         }
