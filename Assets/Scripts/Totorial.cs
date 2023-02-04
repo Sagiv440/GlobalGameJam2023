@@ -28,6 +28,7 @@ public class Totorial : MonoBehaviour
         count = 0;
         typeTimer = new Timer(typeTime);
         typeTimer.ActivateTimer();
+        
 
         totrial = new List<string>();
 

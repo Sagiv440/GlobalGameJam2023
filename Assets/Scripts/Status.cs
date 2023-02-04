@@ -7,14 +7,18 @@ public class Status : MonoBehaviour
 {
     [SerializeField] public float Helth;
     [SerializeField] public Animator anim = null;
+    [SerializeField] AudioSource AS;
+    [SerializeField] AudioClip[] DeathSound;
     private GameManager gm;
 
+    private SmartSwitch DeathSwitch;
     private Timer deathTimer;
 
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
         deathTimer = new Timer(3f);
+        DeathSwitch = new SmartSwitch(false);
     }
 
     private void Update()
@@ -37,9 +41,14 @@ public class Status : MonoBehaviour
         }
         else
         {
-            anim.SetBool("isDead", true);
-            deathTimer.ActivateTimer();
-            GetComponent<NavMeshAgent>().enabled = false;
+            DeathSwitch.Update(true);
+            if (DeathSwitch.OnPress())
+            {
+                AS.PlayOneShot(DeathSound[Random.Range(0, DeathSound.Length)]);
+                anim.SetBool("isDead", true);
+                deathTimer.ActivateTimer();
+                GetComponent<NavMeshAgent>().enabled = false;
+            }
         }
     }
 
