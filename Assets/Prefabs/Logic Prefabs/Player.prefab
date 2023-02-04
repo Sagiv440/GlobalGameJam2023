@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7220460958b5f4fb05720f1695ad57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}
   Sponers: {fileID: 145396553759775640, guid: 3f0e63019ffe27340b16805d4024a776, type: 3}
-  sponeDelay: 2
-  ArmyCount: 5
+  sponeDelay: 0.5
+  ArmyCount: 15
+  baseArmyCount: 15
+  ReturnButton: {fileID: 0}
