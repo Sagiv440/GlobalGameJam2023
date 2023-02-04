@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7851297823317596414}
   - component: {fileID: 2649005578797538464}
   m_Layer: 0
-  m_Name: stealth
+  m_Name: Immunity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a4217195ee77414483aadcac2d81d35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4dcf5e87da5ae4c4f8de4c5fa02050a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

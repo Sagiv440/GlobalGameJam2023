@@ -578,7 +578,7 @@ SpriteRenderer:
   m_Size: {x: 4.42, y: 3.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &315514009
@@ -1335,6 +1335,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3693820215527702690, guid: d4122af36c74fe44f95757959edfc105,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cb485baaf74ad14b85baa74dbf21fb4,
+        type: 3}
     - target: {fileID: 5459197918290309783, guid: d4122af36c74fe44f95757959edfc105,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2301,6 +2307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928172041}
   - component: {fileID: 928172042}
+  - component: {fileID: 928172043}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -2365,10 +2372,35 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 980230170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 928172043}
+        m_TargetAssemblyTypeName: moveScene, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &928172043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928172040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb58db55ef91bd41b94c53ba608913b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene_name: Level_1
 --- !u!1 &980230168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 3.25
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -3106,6 +3138,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 13.63
       objectReference: {fileID: 0}
+    - target: {fileID: 8989661543190683194, guid: 167b1dffaa603794cbd7dd06ea606aac,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b570d580972a6914abd1704aaabc7594,
+        type: 3}
     - target: {fileID: 8992230435672783590, guid: 167b1dffaa603794cbd7dd06ea606aac,
         type: 3}
       propertyPath: m_CullTransparentMesh
@@ -3499,7 +3537,7 @@ SpriteRenderer:
   m_Size: {x: 4.42, y: 3.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &1435353747
@@ -5566,7 +5604,7 @@ SpriteRenderer:
   m_Size: {x: 4.42, y: 3.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &160206486901439042
@@ -5627,8 +5665,8 @@ MonoBehaviour:
   - {fileID: 753822492}
   - {fileID: 126669319}
   possibleAttributes:
-  - {fileID: 7561069271275879502, guid: 1c39d7cb9400feb4bab4b6a2ced6c6e4, type: 3}
-  - {fileID: 317759906745475355, guid: 2f7dcce1c02d51e498a244abc3e0fd31, type: 3}
+  - {fileID: 4721307993461367366, guid: 8077aa27cadd75047a414f9a015d9d1f, type: 3}
+  - {fileID: 2767810453152095815, guid: 56c995f1cc604d44bb166648a0b7b31e, type: 3}
   - {fileID: 6303297545764333298, guid: 4c0ba01c16b0b6840b164976b069d0db, type: 3}
   - {fileID: 5689036244795876704, guid: 7b576771a3d87f548926ae4e2435c6c5, type: 3}
   - {fileID: 7316793152579557539, guid: 190c1a887e4b9dd45bb03cdb0e1faaba, type: 3}
@@ -5706,7 +5744,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7863e7bc985b99d4896c7fd2db77e0a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e6bf549b9cd72348adefdfe8edc9ff5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5793,7 +5831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 559f630eba694bb4aa0f2e48f0abf1b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cb485baaf74ad14b85baa74dbf21fb4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6263,6 +6301,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 13.63
       objectReference: {fileID: 0}
+    - target: {fileID: 8989661543190683194, guid: 167b1dffaa603794cbd7dd06ea606aac,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b570d580972a6914abd1704aaabc7594,
+        type: 3}
     - target: {fileID: 8992230435672783590, guid: 167b1dffaa603794cbd7dd06ea606aac,
         type: 3}
       propertyPath: m_CullTransparentMesh

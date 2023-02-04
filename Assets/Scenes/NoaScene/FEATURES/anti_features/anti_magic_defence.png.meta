@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Materials/Materials Maps/staffnormalmap.png.meta
-guid: 6aca331478564a04cbf546a50bfc783a
-========
-guid: 78280194f4bcd4147bdb373e653b2e14
->>>>>>>> a85e96d (Not lost!):Assets/Scenes/NoaScene/arrow/switch_branch.png.meta
+guid: 2d91252ff7e1704478a3c46389a4ffd8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,21 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< HEAD:Assets/Materials/Materials Maps/staffnormalmap.png.meta
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-========
->>>>>>>> a85e96d (Not lost!):Assets/Scenes/NoaScene/arrow/switch_branch.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []
