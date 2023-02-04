@@ -27,7 +27,6 @@ public enum GAME_STATE
 {
     VIEW = 0,
     PLAY = 1,
-    FINISH_SPAWN = 2,
-    END = 3,
+    END = 2,
 }
 

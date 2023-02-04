@@ -21,6 +21,7 @@ public class GameMg : MonoBehaviour
     void Update()
     {
         if(tm.IsTimerEnded()){
+            Debug.Log("Ended timer, switching scene");
             GameStateMangment.game_state = GAME_STATE.PLAY;
             SceneManager.LoadScene("Level_1");
         }
