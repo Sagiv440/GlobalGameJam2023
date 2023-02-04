@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Meshes/FBX Imports/Lava Fall.fbx.meta
-guid: cb665bd4015ed434c9537bbf14fb177c
-========
-guid: 013c92897e47e0d4094c2e999ccbf5f5
->>>>>>>> main:Assets/Animations/Basic Rig.fbx.meta
+guid: 6736752487c3ec24e90c9568989b7c53
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
