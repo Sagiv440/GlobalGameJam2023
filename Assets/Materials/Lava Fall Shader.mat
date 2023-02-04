@@ -54,7 +54,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Ripple_Dense: -0.89
-    - _Vertex_Control: -0.001
+    - _Vertex_Control: 0
     m_Colors:
     - _Color: {r: 1.7207954, g: 1.5225886, b: 1.4505134, a: 0}
     - _Ripple_Speed: {r: 0, g: 0.5, b: 0, a: 0}
