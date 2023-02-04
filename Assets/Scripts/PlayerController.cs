@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sponeDelay = 1.0f;
     [SerializeField] private int ArmyCount = 15;
     [SerializeField] private int baseArmyCount = 15;
+
+    [SerializeField] GameObject ReturnButton;
 
     private SmartSwitch st;
 
@@ -48,9 +51,11 @@ public class PlayerController : MonoBehaviour
         switch(gm.gameState)
         {
             case GAME_STATE.VIEW:
+                ReturnButton.SetActive(true);
                 break;
 
             case GAME_STATE.PLAY:
+                ReturnButton.SetActive(false);
                 if (SponeTimer.IsTimerEnded() == true && ArmyCount > 0)
                 {
                     //Fire
@@ -94,5 +99,10 @@ public class PlayerController : MonoBehaviour
             ArmyCount = baseArmyCount;
             gm.gameState = GAME_STATE.PLAY;
         }
+    }
+
+    public void returnToView()
+    {
+        SceneManager.LoadScene("noaScene");
     }
 }
