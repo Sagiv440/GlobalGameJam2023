@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes: []
-  speed: 3.5
-  health: 60
+  speed: 2.5
+  health: 50
   evasionEnabled: 0
   evasionModifier: 15
   flyEnabled: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   firstAttack: 0
   firstImmune: 0
   baseSpeed: 3.5
-  baseHealth: 60
+  baseHealth: 50
   baseEvasionEnabled: 0
   baseEvasionModifier: 15
   baseFlyEnabled: 0

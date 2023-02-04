@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     public bool evasionEnabled = false;
     public float evasionModifier = 1f;
     public bool flyEnabled = false;
-    public bool attackEnabled = false;
+    public bool attackEnabled = false;      
     public bool immuneEnabled = false;
 
     [SerializeField] public NavMeshAgent agent;

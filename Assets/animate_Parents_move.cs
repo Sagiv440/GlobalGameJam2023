@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[RequireComponent(typeof(AudioSource))]
 
 public class animate_Parents_move : MonoBehaviour
 {
+    AudioSource audioData;
     public List<GameObject> Parents;
     public GameObject Tree;
     public int index = 0;
@@ -22,6 +24,7 @@ public class animate_Parents_move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioData = GetComponent<AudioSource>();
         treelerp = new float_lerp(Tree.transform.position.x, Tree.transform.position.x);
         treeSwitch = new SmartSwitch(false);
         //Button thisbutton = this.GetComponent<Button>();
@@ -99,6 +102,7 @@ public class animate_Parents_move : MonoBehaviour
 
     public void onClick(Button button)
     {
+        audioData.Play(0);
         if(button.name=="Switch_branch_right")
         {
             Parents[index].SetActive(false);

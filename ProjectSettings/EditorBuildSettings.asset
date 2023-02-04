@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Game Scene/Totorial.unity
     guid: fb22fd69b73d3884ea37cf3c21716d95
   - enabled: 1
-    path: Assets/Scenes/ItayScene/itayNoaSceneBackup.unity
-    guid: aea67c441f6cf7d4eaffadb899dd5af5
+    path: Assets/Scenes/noaScene.unity
+    guid: da5d37836f19e434a890bc60a51452f4
   - enabled: 1
     path: Assets/Scenes/Main Game Scene/Level_1.unity
     guid: f86620e2b7755ca49aba77ef3802d462
