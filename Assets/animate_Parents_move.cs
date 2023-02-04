@@ -25,6 +25,11 @@ public class animate_Parents_move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameStateMangment.Levels>=1)
+        {
+            Debug.Log("add");
+            Parents.Add(Unload_parents[1]);
+        }
         
         audioData = GetComponent<AudioSource>();
         treelerp = new float_lerp(Tree.transform.position.x, Tree.transform.position.x);
