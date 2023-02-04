@@ -20,6 +20,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float SpottingRadiuse = 2.0f;
     [SerializeField] private float AttackTime;
     [SerializeField] private float Damage_Amount;
+    [SerializeField] private GameObject stafepoint;
+    [SerializeField] private GameObject projectile;
 
     private Timer AttackTimer;
 
@@ -116,8 +118,9 @@ public class CharacterController : MonoBehaviour
         {
             if (AttackTimer.IsTimerEnded() == true)
             {
-                //Fire
-                // Debug.Log("Attack Tower: " + Target_0);
+                GameObject proje = Instantiate(projectile, stafepoint.transform.position, Quaternion.identity);
+            
+                proje.GetComponent<Projectile>().setProj(0.1f, Target_0);
                 Target_0.GetComponent<Status>().TackDamage(Damage_Amount);
                 AttackTimer.SetTimerTime(AttackTime);
                 AttackTimer.ActivateTimer();

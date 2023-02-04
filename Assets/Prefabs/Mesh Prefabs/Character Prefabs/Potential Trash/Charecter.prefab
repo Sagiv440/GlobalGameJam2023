@@ -168,9 +168,12 @@ MonoBehaviour:
   immuneEnabled: 0
   agent: {fileID: 0}
   Target_0: {fileID: 0}
-  SpottingRadiuse: 3
+  SpottingRadiuse: 4
   AttackTime: 1
   Damage_Amount: 50
+  stafepoint: {fileID: 3382409262162421995}
+  projectile: {fileID: 1993436293240103095, guid: 486837f92893fb14eb4db30b3281291a,
+    type: 3}
 --- !u!114 &145396553759775632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,8 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segments: 32
   col: {r: 0, g: 0.13275051, b: 1, a: 1}
-  xradius: 3
-  zradius: 3
+  xradius: 4
+  zradius: 4
   rotationOffset: {x: 0, y: 0, z: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   scaleFac: 10
@@ -397,6 +400,12 @@ GameObject:
 --- !u!1 &3149073923831847594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6233020140762349466, guid: 55203e011c024cf48be02212598e2dc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9021801627590321456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3382409262162421995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6035768574988078555, guid: 55203e011c024cf48be02212598e2dc6,
     type: 3}
   m_PrefabInstance: {fileID: 9021801627590321456}
   m_PrefabAsset: {fileID: 0}
