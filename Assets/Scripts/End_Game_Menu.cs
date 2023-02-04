@@ -10,17 +10,21 @@ public class End_Game_Menu : MonoBehaviour
 {
     Timer eTime;
     int state = 0;
+    int st = 0;
 
 
     [SerializeField] TextMeshProUGUI Title;
-    [SerializeField] TextMeshProUGUI Score;
-    [SerializeField] TextMeshProUGUI Credit;
+    [SerializeField] TextMeshProUGUI creditTo;
+
+    [SerializeField] TextMeshProUGUI[] Credits;
+    [SerializeField] RawImage[] CreditsImg;
 
     [SerializeField] GameObject ReturnButton;
 
     private fadingText _Title;
-    private fadingText _Score;
-    private fadingText _Credit;
+    private fadingText _CreditTo;
+    private fadingText[] _Credit;
+    private fadingImage[] _CreditsImg;
     private float tm = 2.0f;
 
     // Start is called before the first frame update
@@ -30,12 +34,25 @@ public class End_Game_Menu : MonoBehaviour
         eTime.ActivateTimer();
 
         _Title = new fadingText(Title);
-        _Score = new fadingText(Score);
-        _Credit = new fadingText(Credit);
+        _CreditTo = new fadingText(creditTo);
+
+        _Credit = new fadingText[Credits.Length];
+        _CreditsImg = new fadingImage[CreditsImg.Length];
+
+        for(int i = 0; i < Credits.Length; i++)
+        {
+            _Credit[i] = new fadingText(Credits[i]);
+            _Credit[i].init();
+        }
+        for (int i = 0; i < CreditsImg.Length; i++)
+        {
+            _CreditsImg[i] = new fadingImage(CreditsImg[i]);
+            _CreditsImg[i].init();
+        }
+
 
         _Title.init();
-        _Score.init();
-        _Credit.init();
+        _CreditTo.init();
 
         ReturnButton.SetActive(false);
     }
@@ -47,25 +64,39 @@ public class End_Game_Menu : MonoBehaviour
         {
             case 0:
                 _Title.update(Time.deltaTime);
+                if (eTime.IsTimerEnded() && state < 4)
+                {
+                    state = 1;
+                    eTime.SetTimerTime(tm);
+                    eTime.ActivateTimer();
+                }
                 break;
 
             case 1:
-                _Score.update(Time.deltaTime);
+                _CreditTo.update(Time.deltaTime);
+                if (eTime.IsTimerEnded() && state < 4)
+                {
+                    state = 2;
+                    eTime.SetTimerTime(tm);
+                    eTime.ActivateTimer();
+                }
                 break;
 
             case 2:
-                _Credit.update(Time.deltaTime);
+                _Credit[st].update(Time.deltaTime);
+                _CreditsImg[st].update(Time.deltaTime);
+                if (eTime.IsTimerEnded() && state < 4)
+                {
+                    st++;
+                    if (st == _Credit.Length) 
+                        state = 3;
+                    eTime.SetTimerTime(tm);
+                    eTime.ActivateTimer();
+                }
                 break;
-                tm = 1.0f;
             case 3:
                 ReturnButton.SetActive(true);
                 break;
-        }
-        if(eTime.IsTimerEnded() && state < 4)
-        {
-            state++;
-            eTime.SetTimerTime(tm);
-            eTime.ActivateTimer();
         }
         eTime.SubtractTimerByValue(Time.deltaTime);
     }
@@ -94,6 +125,30 @@ class fadingText
         if (t.IsTimerActive())
         {
             text.color = new Color(text.color.r, text.color.g, text.color.b, t.GetCurrentTime());
+            t.SubtractTimerByValue(time);
+        }
+    }
+}
+
+class fadingImage
+{
+    RawImage image;
+    Timer t;
+    public fadingImage(RawImage img)
+    {
+        image = img;
+        t = new Timer(1.0f);
+    }
+    public void init()
+    {
+        t.ActivateTimer();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
+    }
+    public void update(float time)
+    {
+        if (t.IsTimerActive())
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, t.GetCurrentTime());
             t.SubtractTimerByValue(time);
         }
     }
