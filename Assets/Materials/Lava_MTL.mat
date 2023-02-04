@@ -163,4 +163,5 @@ Material:
     - _Second_Normal_Scale: {r: 5, g: 5, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Vector2: {r: 0.84, g: 0, b: 0, a: 0}
+    - _emission: {r: 0.5156646, g: 0.16090252, b: 0.021891413, a: 0}
   m_BuildTextureStacks: []

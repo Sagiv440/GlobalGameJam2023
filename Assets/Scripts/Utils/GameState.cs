@@ -7,4 +7,9 @@ public class GameStateMangment
     public static GAME_STATE game_state;
     public static List<talents> talets;
     public static talents tln;
+
+    public static float Timer_timeLeft;
+    public static int Returned;
+
+    public static int Levels;
 }

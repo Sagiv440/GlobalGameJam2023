@@ -107,7 +107,7 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-        this.GetComponent<Status>().TackDamage(damage);
+        this.GetComponent<Status>().TackDamage(car_dmg);
     }
 
     void Attack_logic()
@@ -162,13 +162,17 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gm.gameState == GAME_STATE.PLAY || gm.gameState == GAME_STATE.FINISH_SPAWN)
+        if(gm.gameState == GAME_STATE.PLAY)
         {
-            
             ScanTarggets();
             Retched_End();
             Attack_logic();
-            agent.SetDestination(gm.End_Point.transform.position);
+            try
+            {
+                if(agent.enabled == true) agent.SetDestination(gm.End_Point.transform.position);
+            }
+            catch
+            { }
         }
     }
 }

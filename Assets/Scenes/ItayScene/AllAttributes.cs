@@ -18,7 +18,7 @@ public class AllAttributes : Character
                 attribute.GetComponent<Attribute>().Apply(this.gameObject);
                 attributes.Add(attribute);
             }
-            
         }
+        GameStateMangment.tln = GetAtributes();
     }
 }

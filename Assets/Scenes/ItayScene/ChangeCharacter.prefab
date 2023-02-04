@@ -81,7 +81,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributeLocations: []
-  possibleAttributes: []
+  possibleAttributes:
+  - {fileID: 325174899352901259, guid: f967cfeba7ba64943870aafd639908ab, type: 3}
+  - {fileID: 325174899352901259, guid: 2197dbe5520f07749bfc4ee5d70aace4, type: 3}
+  - {fileID: 325174899352901259, guid: e820d1228367cef448f97581f7d115ef, type: 3}
+  - {fileID: 325174899352901259, guid: 8307033851640784c98c3ad0028e4701, type: 3}
+  - {fileID: 325174899352901259, guid: d31fcd2bea11aac4480619faeb96bb24, type: 3}
+  - {fileID: 325174899352901259, guid: f36ed5ca7e70ec34dbd76b2116f48a12, type: 3}
+  - {fileID: 325174899352901259, guid: 32d0fc652b83e3a40b8ebabdace3ebc7, type: 3}
+  - {fileID: 325174899352901259, guid: 8a5ea11beb0d2bd4b8518740b2aacd14, type: 3}
   attributeCount: 2
   character: {fileID: 0}
 --- !u!1001 &6595325729905544827

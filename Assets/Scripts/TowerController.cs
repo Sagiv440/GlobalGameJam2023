@@ -12,6 +12,7 @@ public class TowerController : MonoBehaviour
     [SerializeField] private float TowerHight = 4f;
 
     [SerializeField] private GameObject Target_0 = null;
+    [SerializeField] private GameObject Projectile;
 
     private Timer AttackTimer;
 
@@ -76,6 +77,11 @@ public class TowerController : MonoBehaviour
         {
             ScanForTargets();
             AttackTarget();
+        }
+        Projectile.SetActive(Target_0 != null);
+        if(Target_0 != null)
+        {
+            Projectile.transform.LookAt(Target_0.transform);
         }
     }
 }
