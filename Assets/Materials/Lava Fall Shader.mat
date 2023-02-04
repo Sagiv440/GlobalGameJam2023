@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Lava Fall Shader 1
+  m_Name: Lava Fall Shader
   m_Shader: {fileID: -6465566751694194690, guid: 9dc591e574914b64fbfca4a9365f05b4,
     type: 3}
   m_ValidKeywords: []
@@ -48,15 +48,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cell_Density: 2.47
+    - _Cell_Density: 1.59
     - _Float: 3
-    - _Foam_Strength: -1.88
+    - _Foam_Strength: -0.81
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Ripple_Dense: -0.89
-    - _Vertex_Control: 0
+    - _Vertex_Control: -0.001
     m_Colors:
-    - _Color: {r: 0.3962264, g: 0.22708258, b: 0.057938762, a: 1}
-    - _Ripple_Speed: {r: 0, g: -1, b: 0, a: 0}
+    - _Color: {r: 1.7207954, g: 1.5225886, b: 1.4505134, a: 0}
+    - _Ripple_Speed: {r: 0, g: 0.5, b: 0, a: 0}
     - _Vector2: {r: 0, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
