@@ -24,6 +24,7 @@ public class animate_Parents_move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         audioData = GetComponent<AudioSource>();
         treelerp = new float_lerp(Tree.transform.position.x, Tree.transform.position.x);
         treeSwitch = new SmartSwitch(false);
@@ -34,19 +35,23 @@ public class animate_Parents_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(index==0)
+        if(Parents.Count==1)
         {
-            switch_left.SetActive(false);
+            switch_left.gameObject.SetActive(false);
+            switch_right.gameObject.SetActive(false);
+        }
+        else if(index==0)
+        {
+            switch_left.gameObject.SetActive(false);
             switch_right.gameObject.SetActive(true);
             
         }
         else if(index==Parents.Count-1)
         {
-            switch_right.SetActive(false);
+            switch_right.gameObject.SetActive(false);
             switch_left.gameObject.SetActive(true);
         }
-        else
+        else 
         {
             switch_left.gameObject.SetActive(true);
             switch_right.gameObject.SetActive(true);

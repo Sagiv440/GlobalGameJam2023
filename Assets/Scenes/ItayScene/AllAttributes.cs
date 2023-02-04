@@ -20,5 +20,6 @@ public class AllAttributes : Character
             }
         }
         GameStateMangment.tln = GetAtributes();
+        this.GetComponent<update_attributes>().update_att_vis();
     }
 }
