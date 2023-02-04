@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class animate_Parents_move : MonoBehaviour
 {
     AudioSource audioData;
+    public List<GameObject> Unload_parents;
     public List<GameObject> Parents;
     public GameObject Tree;
     public int index = 0;
