@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if(CommonFunctions.IsClose(Target.transform.position, this.transform.position, 0.2f))
+        else if(CommonFunctions.IsClose(Target.transform.position, this.transform.position, 0.2f))
         {
             Destroy(this.gameObject);
         }
