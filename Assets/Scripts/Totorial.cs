@@ -31,14 +31,12 @@ public class Totorial : MonoBehaviour
 
         totrial = new List<string>();
 
-        totrial.Add("Oh so you are the new general! you either brave or stupid non the less You are not prepared for this Crusade");
-        totrial.Add("Well there is no turning back so listen UP!\n we were orderd by the king to hunt down the devil himself.");
-        totrial.Add("I cant say I could have found a better candidate. probably because no one is stupid enough to volunteer");
-        totrial.Add("did you ever wonder how much fucked up is fucked up ? because you are very much Fucked up");
-        totrial.Add("your mission is to lead an assualte on the devile's keep ,his favorite methead defence is Tower defence,cachy eh? now in order to survive thise onslaught you the canon fodd..i meam herose were chosen   ");
+        totrial.Add("Oh, so you are the new general! you either brave or stupid to take on this mission");
+        totrial.Add("Well, there is no turning back now, so listen UP!\n we were orderd by the king to hunt down the devil himself.");
+        totrial.Add("your mission is to lead an assualte on the devile's keep. ");
         totrial.Add("In order to win you must refine the most efficient for the job.");
         totrial.Add("A natural talet of a soldier is is determent by his famely roots");
-        totrial.Add("   Magic: give your soldiers range abilties to     bring down the towers\n     Life: Make your man more resistance to      Damage\n     Strangth: Incress the Fiscal capabiltis of        your soldier\n      Fly: A soldier will have the abilty to       clear gaps int dog defences.");
+        totrial.Add("   Magic: give your soldiers range abilties to bring down the towers\n     Life: Make your soldiers more resistance to damage\n     Strangth: Incress the physical capabiltis of your soldier\n      Fly: A soldier will have the abilty to clear gaps.");
     }
 
     private void Update()
