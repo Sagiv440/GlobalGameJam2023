@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class moveScene : MonoBehaviour
 {
     AudioSource audioData;
-    public string scene_name;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +22,6 @@ public class moveScene : MonoBehaviour
     public void onClick()
     {
         audioData.Play(0);
-        SceneManager.LoadScene(sceneName:scene_name);
+        SceneManager.LoadScene(Levels.levels[GameStateMangment.Levels]);
     }
 }

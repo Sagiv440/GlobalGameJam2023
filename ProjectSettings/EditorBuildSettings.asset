@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Game Scene/Totorial.unity
     guid: fb22fd69b73d3884ea37cf3c21716d95
   - enabled: 1
-    path: Assets/Scenes/noaScene.unity
-    guid: da5d37836f19e434a890bc60a51452f4
-  - enabled: 1
     path: Assets/Scenes/Main Game Scene/Level_1.unity
     guid: f86620e2b7755ca49aba77ef3802d462
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Game Scene/CreditScene.unity
     guid: eb1573cd3177b7f489d2d5a0dbcceba3
+  - enabled: 1
+    path: Assets/Scenes/Main Game Scene/Level_tree.unity
+    guid: 027513566100ee541a7706876af8525e
   m_configObjects: {}
