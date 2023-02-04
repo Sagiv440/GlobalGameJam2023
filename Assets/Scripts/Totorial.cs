@@ -52,7 +52,7 @@ public class Totorial : MonoBehaviour
         }
         typeTimer.SubtractTimerByValue(Time.deltaTime);
 
-        if(index == 4)
+        if(index == 3)
         {
             foreach(RawImage i in Img_line5)
             {
@@ -67,7 +67,7 @@ public class Totorial : MonoBehaviour
             }
         }
 
-        if (index == 6)
+        if (index == 4)
         {
             foreach (RawImage i in Img_line6)
             {
@@ -82,7 +82,7 @@ public class Totorial : MonoBehaviour
             }
         }
 
-        if (index == 7)
+        if (index == 5)
         {
             foreach (RawImage i in Img_line7)
             {

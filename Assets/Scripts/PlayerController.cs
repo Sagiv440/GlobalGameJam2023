@@ -99,7 +99,14 @@ public class PlayerController : MonoBehaviour
                         GameStateMangment.talets = gm.Serviving_Characters;
                         GameStateMangment.Returned = 0;
                         GameStateMangment.Levels++;
-                        returnToView();
+                        if(GameStateMangment.Levels >= Levels.levels.Length)
+                        {
+                            SceneManager.LoadScene("CreditScene");
+                        }
+                        else
+                        {
+                            returnToView();
+                        }
                     }
                     else
                     {
