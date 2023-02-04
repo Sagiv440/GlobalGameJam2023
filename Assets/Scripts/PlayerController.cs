@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
                     if (attributesHolder != null)
                     {
                         character.GetComponent<CharacterController>().SetAtributes(new talents() { speed = attributesHolder.speed, health = attributesHolder.health, evasionEnabled = attributesHolder.evasionEnabled, evasionModifier = attributesHolder.evasionModifier, flyEnabled = attributesHolder.flyEnabled, attackEnabled = attributesHolder.attackEnabled, attackDamage = attributesHolder.attackDamage, attackTime = attributesHolder.attackTime, immuneEnabled = attributesHolder.immuneEnabled });
+                        character.GetComponent<ArmorChange>().SetArmor();
                     }
                     SponeTimer.SetTimerTime(sponeDelay);
                     SponeTimer.ActivateTimer();
@@ -124,6 +125,6 @@ public class PlayerController : MonoBehaviour
 
     public void returnToView()
     {
-        SceneManager.LoadScene("itayNoaSceneBackup");
+        SceneManager.LoadScene("NoaScene");
     }
 }

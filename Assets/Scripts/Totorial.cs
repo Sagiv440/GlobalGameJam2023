@@ -110,7 +110,7 @@ public class Totorial : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("itayNoaSceneBackup");
+            SceneManager.LoadScene("NoaScene");
         }
     }
 }
