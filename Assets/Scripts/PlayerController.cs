@@ -19,15 +19,12 @@ public class PlayerController : MonoBehaviour
 
     private Timer SponeTimer;
     
-
-
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
         try
         {
             attributesHolder = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
-            attributesHolder.SetAtributes(GameStateMangment.tln);
         }
         catch {}
         SponeTimer = new Timer(sponeDelay);
@@ -39,15 +36,15 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         if(GameStateMangment.game_state == GAME_STATE.PLAY)
+        {
+            Debug.Log("Loaded stats. Speed, health: " + GameStateMangment.tln.speed.ToString() + ", " + GameStateMangment.tln.health.ToString());
+            attributesHolder.SetAtributes(GameStateMangment.tln);
             SetGameStatePlay();
+        }
     }
 
     private void Update()
     {
-        if (ArmyCount == 0 && gm.gameState == GAME_STATE.PLAY)
-            {
-                gm.gameState = GAME_STATE.FINISH_SPAWN;
-            }
         switch(gm.gameState)
         {
             case GAME_STATE.VIEW:
@@ -62,13 +59,11 @@ public class PlayerController : MonoBehaviour
                     var character = Instantiate(Sponers, gm.Start_Point.transform);
                     if (attributesHolder != null)
                     {
-                        attributesHolder.ApplyAttributes();
                         character.GetComponent<CharacterController>().SetAtributes(new talents() { speed = attributesHolder.speed, health = attributesHolder.health, evasionEnabled = attributesHolder.evasionEnabled, evasionModifier = attributesHolder.evasionModifier, flyEnabled = attributesHolder.flyEnabled, attackEnabled = attributesHolder.attackEnabled, attackDamage = attributesHolder.attackDamage, attackTime = attributesHolder.attackTime, immuneEnabled = attributesHolder.immuneEnabled });
                     }
                     SponeTimer.SetTimerTime(sponeDelay);
                     SponeTimer.ActivateTimer();
                     ArmyCount--;
-
                 }
                 SponeTimer.SubtractTimerByValue(Time.deltaTime);
 
@@ -76,9 +71,6 @@ public class PlayerController : MonoBehaviour
                 {
                     gm.gameState = GAME_STATE.END;
                 }
-                break;
-
-            case GAME_STATE.FINISH_SPAWN:
                 break;
 
             case GAME_STATE.END:
@@ -94,11 +86,8 @@ public class PlayerController : MonoBehaviour
 
     public void SetGameStatePlay()
     {
-        if (gm.gameState == GAME_STATE.FINISH_SPAWN || gm.gameState == GAME_STATE.VIEW)
-        {
-            ArmyCount = baseArmyCount;
-            gm.gameState = GAME_STATE.PLAY;
-        }
+        ArmyCount = baseArmyCount;
+        gm.gameState = GAME_STATE.PLAY;
     }
 
     public void returnToView()

@@ -6,6 +6,6 @@ public class LifeMinus : Attribute
 {
     override public void Apply(GameObject character)
     {
-        character.GetComponent<Character>().health /= 1.5f;
+        character.GetComponent<Character>().health /= 1.22f;
     }
 }
