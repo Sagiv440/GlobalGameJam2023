@@ -33,10 +33,10 @@ public class Totorial : MonoBehaviour
 
         totrial.Add("Oh, so you are the new general! you either brave or stupid to take on this mission");
         totrial.Add("Well, there is no turning back now, so listen UP!\n we were orderd by the king to hunt down the devil himself.");
-        totrial.Add("your mission is to lead an assualte on the devile's keep. ");
-        totrial.Add("In order to win you must refine the most efficient for the job.");
-        totrial.Add("A natural talet of a soldier is is determent by his famely roots");
-        totrial.Add("   Magic: give your soldiers range abilties to bring down the towers\n     Life: Make your soldiers more resistance to damage\n     Strangth: Incress the physical capabiltis of your soldier\n      Fly: A soldier will have the abilty to clear gaps.");
+        totrial.Add("your mission is to lead an assualte on the devil's realm. ");
+        totrial.Add("In order to win, you must choose and imprive the most efficient soldiers for the job.");
+        totrial.Add("The talet of a soldier is determent by his famely roots");
+        totrial.Add("   Magic: gives your soldiers range abilties to bring down the towers\n     Life: Makes your soldiers more resistance to damage\n     Strangth: Increases the physical capabiltis of your soldier.");
     }
 
     private void Update()
