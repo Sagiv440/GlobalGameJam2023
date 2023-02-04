@@ -9,6 +9,7 @@ public class Status : MonoBehaviour
     [SerializeField] public Animator anim = null;
     [SerializeField] AudioSource AS;
     [SerializeField] AudioClip[] DeathSound;
+    [SerializeField] GameObject blood;
     private GameManager gm;
 
     private SmartSwitch DeathSwitch;
@@ -44,6 +45,7 @@ public class Status : MonoBehaviour
             DeathSwitch.Update(true);
             if (DeathSwitch.OnPress())
             {
+                Instantiate(blood, this.transform.position, Quaternion.identity);
                 AS.PlayOneShot(DeathSound[Random.Range(0, DeathSound.Length)]);
                 anim.SetBool("isDead", true);
                 deathTimer.ActivateTimer();

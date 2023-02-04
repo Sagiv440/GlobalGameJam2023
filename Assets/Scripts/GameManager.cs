@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<GameObject> Charecters;
     [SerializeField] public List<GameObject> Towers;
 
-    public List<talents> Serviving_Characters;
+    [SerializeField] public GameObject ricushet;
 
+    public List<talents> Serviving_Characters;
 
     private List<GameObject> setCharList(string tag)
     {
@@ -56,8 +57,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Charecter: Name  with speed: " + t.speed + ", Heath: " + t.health);
         }
     }
-
-
 }
 
 

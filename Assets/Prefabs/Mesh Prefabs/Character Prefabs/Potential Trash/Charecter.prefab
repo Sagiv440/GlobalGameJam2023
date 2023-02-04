@@ -146,6 +146,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 92c3d1f372bf37346a9bb5fc0bafdd58, type: 3}
   - {fileID: 8300000, guid: 203ae723ba3958f43a2eeb92ec1a70a1, type: 3}
   - {fileID: 8300000, guid: 30dada374303a0a46a952a3899e8ca59, type: 3}
+  blood: {fileID: 2642655718119486247, guid: af0b227743e06264d8b697bc67f602d0, type: 3}
 --- !u!114 &145396553759775639
 MonoBehaviour:
   m_ObjectHideFlags: 0
