@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(AudioSource))]
 
 public class ChangeCharacterButton : MonoBehaviour
 {
+    AudioSource audioData;
     public List<GameObject> attributeLocations;
     public List<GameObject> possibleAttributes;
     public int attributeCount = 2;
@@ -14,12 +16,14 @@ public class ChangeCharacterButton : MonoBehaviour
 
     public void Awake()
     {
+        audioData = GetComponent<AudioSource>();
         allAttributes = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
         OnClick();
     }
 
     public void OnClick()
     {
+        
         Debug.Log("Changing character...");
         // Clear stats
         for (int i = 0; i < 5; i++)
@@ -40,5 +44,9 @@ public class ChangeCharacterButton : MonoBehaviour
         }
         // Update AllAttributes
         allAttributes.ApplyAttributes();
+    }
+    public void music_click()
+    {
+        audioData.Play(0);
     }
 }

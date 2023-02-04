@@ -90,7 +90,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Elecricty_Thickness: 5
-    - _ElectrcityAmount: 1
+    - _ElectrcityAmount: 3
     - _Electro_Scale: 25
     - _EnvironmentReflections: 1
     - _Fade: 10

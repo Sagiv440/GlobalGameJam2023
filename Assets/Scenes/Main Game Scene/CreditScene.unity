@@ -176,9 +176,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alex Abramovich  TechArt
+  m_text: Alex Abramovich, 3D Arist
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
   m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
@@ -587,9 +587,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -600,8 +600,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -738,14 +738,14 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8980392, g: 0.5921569, b: 0.4, a: 1}
+    topRight: {r: 1, g: 0.95686275, b: 0.2509804, a: 1}
+    bottomLeft: {r: 1, g: 0.97018063, b: 0.5235849, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -879,9 +879,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+    topLeft: {r: 0.8980392, g: 0.5921569, b: 0.4, a: 1}
     topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 0.96862745, g: 1, b: 0.7490196, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -1425,9 +1425,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+    topLeft: {r: 0.8980392, g: 0.5921569, b: 0.4, a: 1}
     topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 0.96862745, g: 1, b: 0.7490196, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Itay Heliberd  Programer
+  m_text: Itay Heliberd, Game Desinger
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
   m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
@@ -1541,9 +1541,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -1554,8 +1554,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Avner Zilbershtien  TechArt
+  m_text: Avner Zilbershtien,  3D Art Lead
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
   m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
@@ -2109,9 +2109,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -2122,8 +2122,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2303,7 +2303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Georgi Abramovich  TechArt
+  m_text: Georgi Abramovich, Technical Artist
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
   m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
@@ -2318,9 +2318,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -2331,8 +2331,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sagiv Reuben  Programer
+  m_text: Sagiv Reuben, Programer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
   m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
@@ -2454,9 +2454,9 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-    topRight: {r: 1, g: 0.9810766, b: 0.5613208, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8962264, g: 0.5938736, b: 0.40161088, a: 1}
+    topRight: {r: 1, g: 0.955056, b: 0.25, a: 1}
+    bottomLeft: {r: 0.9692495, g: 1, b: 0.75, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -2467,8 +2467,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
