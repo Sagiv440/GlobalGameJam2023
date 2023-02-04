@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class GameStateMangment
 {
+    public static GAME_STATE game_state;
     public static List<talents> talets;
+    public static talents tln;
 }

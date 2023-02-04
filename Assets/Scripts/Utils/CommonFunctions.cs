@@ -60,6 +60,11 @@ public class float_lerp
     private float end;
     private Timer timer;
 
+    public bool IsFinished()
+    {
+        return timer.IsTimerEnded();
+    }
+
     public float_lerp(float start = 0.0f, float end = 0.0f)
     {
         this.start = start;

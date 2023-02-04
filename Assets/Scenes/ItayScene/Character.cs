@@ -43,10 +43,42 @@ public class Character : MonoBehaviour
         flyEnabled = baseFlyEnabled;
         attackEnabled = baseAttackEnabled;
         attackDamage = baseAttackDamage;
-        baseAttackTime = baseAttackTime;
+        attackTime = baseAttackTime;
         immuneEnabled = baseImmuneEnabled;
         firstFly = baseFirstFly;
         firstAttack = baseFirstAttack;
         firstImmune = baseFirstImmune;
+    }
+
+    public talents GetAtributes()
+    {
+        talents tln = new talents();
+        tln.speed = speed;
+        tln.health = health;
+        tln.evasionEnabled = evasionEnabled;
+        tln.evasionModifier = evasionModifier;
+        tln.flyEnabled = flyEnabled;
+        tln.attackEnabled = attackEnabled;
+        tln.attackDamage = attackDamage;
+        tln.attackTime = attackTime;
+        tln.immuneEnabled = immuneEnabled;
+        return tln;
+    }
+
+    public void SetAtributes(talents tln)
+    {
+        speed = tln.speed;
+        health = tln.health;
+        evasionEnabled = tln.evasionEnabled;
+        evasionModifier = tln.evasionModifier;
+        flyEnabled = tln.flyEnabled;
+        attackEnabled = tln.attackEnabled;
+        attackDamage = tln.attackDamage;
+        attackTime = tln.attackTime;
+        immuneEnabled = tln.immuneEnabled;
+    }
+    public void Build_Army()
+    {
+        GameStateMangment.tln = GetAtributes();
     }
 }

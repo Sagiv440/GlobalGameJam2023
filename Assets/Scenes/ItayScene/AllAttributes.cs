@@ -10,6 +10,7 @@ public class AllAttributes : Character
     {
         ResetAttributes();
         attributes.Clear();
+
         foreach (var parent in parents)
         {
             foreach (var attribute in parent.attributes)

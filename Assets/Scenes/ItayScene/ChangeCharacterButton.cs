@@ -15,6 +15,7 @@ public class ChangeCharacterButton : MonoBehaviour
     public void Awake()
     {
         allAttributes = GameObject.FindGameObjectWithTag(Tags.ALL_ATTRIBUTES).GetComponent<AllAttributes>();
+        OnClick();
     }
 
     public void OnClick()
