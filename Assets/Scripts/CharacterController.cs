@@ -169,7 +169,7 @@ public class CharacterController : MonoBehaviour
             Attack_logic();
             try
             {
-                agent.SetDestination(gm.End_Point.transform.position);
+                if(agent.enabled == true) agent.SetDestination(gm.End_Point.transform.position);
             }
             catch
             { }
