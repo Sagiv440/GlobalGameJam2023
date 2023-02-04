@@ -1796,6 +1796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516036988199484715, guid: dd431343072b3144b81db0252ed3ef78,
         type: 3}
+      propertyPath: ReturnButton
+      value: 
+      objectReference: {fileID: 1546205294}
+    - target: {fileID: 6516036988199484715, guid: dd431343072b3144b81db0252ed3ef78,
+        type: 3}
       propertyPath: baseArmyCount
       value: 15
       objectReference: {fileID: 0}
@@ -2305,6 +2310,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446062322480974050, guid: 6a9a37d92298051468333c9559f40bb5,
     type: 3}
   m_PrefabInstance: {fileID: 77038558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1546205294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3467243724316363516, guid: 1263eea7a28ad3044b5534699b36954c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3239710591769862225}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1652117771 stripped
 Transform:
@@ -3459,6 +3470,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 977937785}
+    - target: {fileID: 570768312795749243, guid: 1263eea7a28ad3044b5534699b36954c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: returnToView
+      objectReference: {fileID: 0}
     - target: {fileID: 3239710591421441715, guid: 1263eea7a28ad3044b5534699b36954c,
         type: 3}
       propertyPath: baseAttackTime

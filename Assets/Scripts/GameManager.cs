@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Charecter: Name  with speed: " + t.speed + ", Heath: " + t.health);
         }
     }
+
+
 }
 
 

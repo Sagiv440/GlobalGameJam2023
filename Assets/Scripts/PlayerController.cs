@@ -76,11 +76,26 @@ public class PlayerController : MonoBehaviour
             case GAME_STATE.END:
                 if (st.OnEvent())
                 {
-                    GameStateMangment.talets = gm.Serviving_Characters;
-                    gm.printServivers();
+                    if (gm.Serviving_Characters.Count != 0)
+                    {
+                        GameStateMangment.talets = gm.Serviving_Characters;
+                        GameStateMangment.Returned = 0;
+                        GameStateMangment.Levels++;
+                        returnToView();
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("CreditScene");
+                    }
+
                 }
                 st.Update(true);
                 break;
+        }
+
+        if(gm.Charecters.Count == 0 && ArmyCount == 0)
+        {
+            gm.gameState = GAME_STATE.END;
         }
     }
 
@@ -92,6 +107,6 @@ public class PlayerController : MonoBehaviour
 
     public void returnToView()
     {
-        SceneManager.LoadScene("noaScene");
+        SceneManager.LoadScene("itayNoaSceneBackup");
     }
 }
