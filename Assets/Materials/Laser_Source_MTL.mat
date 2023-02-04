@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Laser_MTL
+  m_Name: Laser_Source_MTL
   m_Shader: {fileID: -6465566751694194690, guid: fa4a6af7a5f65f642a45eee3bee8d43e,
     type: 3}
   m_ValidKeywords: []
@@ -22,11 +22,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 97cb172d47671c24887a37521dd58e87, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: ecde501f0a7b2f048b16c762b4a215c1, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_78c8dc57585646a7b537b69720988120_Texture_1:
@@ -47,16 +47,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveAmount: 0.241
-    - _NoiseAmount: 0.162
+    - _DissolveAmount: 0
+    - _NoiseAmount: 0.179
     - _NoisePower: 2
-    - _NoiseScale: 25
+    - _NoiseScale: 30.6
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 89.45409, g: 89.45409, b: 89.45409, a: 1}
-    - _Main_Speed: {r: -0.5, g: 0, b: 0, a: 0}
-    - _NoiseSpeed: {r: -1, g: 0, b: 0, a: 0}
+    - _Color: {r: 38.937145, g: 38.937145, b: 38.937145, a: 1}
+    - _Main_Speed: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseSpeed: {r: -0.4, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9037278716013676920
 MonoBehaviour:
