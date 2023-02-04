@@ -636,6 +636,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdbaa1bcbc0839f43b08393d4498e745, type: 3}
+--- !u!4 &658262950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6279389513789855716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &666889815
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +675,7 @@ Transform:
   - {fileID: 167719802}
   - {fileID: 722784874}
   - {fileID: 1118898393}
+  - {fileID: 658262950}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -942,6 +949,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: bridge_left_turn
       objectReference: {fileID: 0}
+    - target: {fileID: 8986321135434971418, guid: 6a9a37d92298051468333c9559f40bb5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 6271573414225017425, guid: cc2e3c6f10c5e204d9ceeaa051e2d7b2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a9a37d92298051468333c9559f40bb5, type: 3}
 --- !u!4 &1118898393 stripped
@@ -2049,6 +2062,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b4af1def5d475b449f8f641d40231bd, type: 3}
+--- !u!1001 &6279389513789855716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 666889816}
+    m_Modifications:
+    - target: {fileID: 6279389513139461185, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava Fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.47403523
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5189348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5272682
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4774784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -95.429
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279389513139461186, guid: 1b1133bf24291df458d45cf7706d0e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.688
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b1133bf24291df458d45cf7706d0e1a, type: 3}
 --- !u!1001 &6878445088344650797
 PrefabInstance:
   m_ObjectHideFlags: 0
