@@ -38,7 +38,7 @@ public class GameMg : MonoBehaviour
 
         if (tm.IsTimerEnded()){
             GameStateMangment.game_state = GAME_STATE.PLAY;
-            SceneManager.LoadScene("Level_1");
+            SceneManager.LoadScene(Levels.levels[GameStateMangment.Levels]);
         }
         tm.SubtractTimerByValue(Time.deltaTime);
     }
@@ -48,6 +48,6 @@ public class GameMg : MonoBehaviour
         GameStateMangment.game_state = GAME_STATE.VIEW;
         GameStateMangment.Timer_timeLeft = tm.GetCurrentTime();
         GameStateMangment.Returned = 1;
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene(Levels.levels[GameStateMangment.Levels]);
     }
 }

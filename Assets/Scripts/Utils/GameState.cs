@@ -10,4 +10,6 @@ public class GameStateMangment
 
     public static float Timer_timeLeft;
     public static int Returned;
+
+    public static int Levels;
 }

@@ -23,6 +23,7 @@ public class Totorial : MonoBehaviour
 
     private void Awake()
     {
+        GameStateMangment.Levels = 0;
         carList = "";
         count = 0;
         typeTimer = new Timer(typeTime);
@@ -110,7 +111,7 @@ public class Totorial : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("noaScene");
+            SceneManager.LoadScene("itayNoaSceneBackup");
         }
     }
 }

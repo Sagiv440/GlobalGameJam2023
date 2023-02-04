@@ -10,9 +10,7 @@ public class Tags
 }
 
 
-/*
-public class GameStateMangment
+public class Levels
 {
-    public static int score = 0;
+    public static string[] levels = { "Level_1", "Level_2" };
 }
-*/
