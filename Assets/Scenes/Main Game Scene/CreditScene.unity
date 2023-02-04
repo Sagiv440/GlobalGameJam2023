@@ -163,8 +163,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Noa Marom  2D Artist, Programer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -574,8 +574,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alex Abramovich  TechArt
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -705,7 +705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275889899
@@ -730,8 +730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Return To Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -756,8 +756,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 47.7
+  m_fontSizeBase: 47.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -866,8 +866,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Credits to:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1387,7 +1387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 458, y: -60}
+  m_AnchoredPosition: {x: 945.00024, y: -60}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700310518
@@ -1410,10 +1410,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thank you for playing our  game \nGlobal  Game Jam 2023
+  m_text: Thank you for playing our game Global Game Jam 2023
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1443,9 +1443,9 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 78.4
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1528,8 +1528,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Itay Heliberd  Programer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2096,8 +2096,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Avner Zilbershtien  TechArt
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2305,8 +2305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Georgi Abramovich  TechArt
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2441,8 +2441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sagiv Reuben  Programer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 321c006e282cc97429ab4d11a14efbec, type: 2}
-  m_sharedMaterial: {fileID: -499857065890676266, guid: 321c006e282cc97429ab4d11a14efbec,
+  m_fontAsset: {fileID: 11400000, guid: 0801ed267af246f4d9744e99e002f71f, type: 2}
+  m_sharedMaterial: {fileID: 3214241477983116639, guid: 0801ed267af246f4d9744e99e002f71f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
