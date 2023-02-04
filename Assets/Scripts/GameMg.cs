@@ -46,7 +46,7 @@ public class GameMg : MonoBehaviour
     public void ViewLevel()
     {
         GameStateMangment.game_state = GAME_STATE.VIEW;
-        GameStateMangment.Timer_timeLeft = carCarTime -tm.GetCurrentTime();
+        GameStateMangment.Timer_timeLeft = tm.GetCurrentTime();
         GameStateMangment.Returned = 1;
         SceneManager.LoadScene("Level_1");
     }

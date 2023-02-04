@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Totorial : MonoBehaviour
 {
@@ -99,10 +100,17 @@ public class Totorial : MonoBehaviour
 
     public void nextLine()
     {
-        carList = "";
-        count = 0;
-        index++;
-        typeTimer.SetTimerTime(typeTime);
-        typeTimer.ActivateTimer();
+        if (index < totrial.Count-1)
+        {
+            carList = "";
+            count = 0;
+            index++;
+            typeTimer.SetTimerTime(typeTime);
+            typeTimer.ActivateTimer();
+        }
+        else
+        {
+            SceneManager.LoadScene("noaScene");
+        }
     }
 }
