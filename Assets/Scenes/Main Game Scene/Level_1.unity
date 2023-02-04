@@ -197,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1297,6 +1297,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 145396553759775640, guid: 3f0e63019ffe27340b16805d4024a776,
         type: 3}
+    - target: {fileID: 6516036988199484715, guid: dd431343072b3144b81db0252ed3ef78,
+        type: 3}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 157553525}
     - target: {fileID: 6516036988199484715, guid: dd431343072b3144b81db0252ed3ef78,
         type: 3}
       propertyPath: ArmyCount
