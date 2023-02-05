@@ -12,9 +12,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<GameObject> Charecters;
     [SerializeField] public List<GameObject> Towers;
 
-    [SerializeField] public GameObject ricushet;
+    [SerializeField] public float PerSpark = 4;
+    [SerializeField] public GameObject Spark;
+    [SerializeField] public float radius = 10;
 
     public List<talents> Serviving_Characters;
+
+    private Timer sparkTime;
 
     private List<GameObject> setCharList(string tag)
     {
@@ -34,7 +38,22 @@ public class GameManager : MonoBehaviour
         Start_Point = GameObject.FindGameObjectWithTag(Tags.STARTPOINT);
         End_Point = GameObject.FindGameObjectWithTag(Tags.ENDPOINT);
         playerController = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+        sparkTime = new Timer(PerSpark);
+        sparkTime.ActivateTimer();
         ResetGameManager();
+    }
+
+    private void Update()
+    {
+        if (sparkTime.IsTimerEnded() && Spark != null)
+        {
+            Vector2 vec = Random.insideUnitCircle;
+            Vector3 pos = new Vector3(vec.x, 0, vec.y) * radius;
+            Instantiate(Spark, pos, Quaternion.identity);
+            sparkTime.SetTimerTime(Random.Range(0.01f, 0.5f));
+            sparkTime.ActivateTimer();
+        }
+        sparkTime.SubtractTimerByValue(Time.deltaTime);
     }
 
     public void ResetGameManager()

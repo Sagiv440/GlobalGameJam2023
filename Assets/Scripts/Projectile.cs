@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 0.1f;
+    [SerializeField] private Vector3 Offset = Vector3.zero;
     [SerializeField] private GameObject Target;
     public bool Fire = false;
 
@@ -29,7 +30,7 @@ public class Projectile : MonoBehaviour
 
         if (Fire == true && Target != null)
         {
-            this.transform.LookAt(Target.transform);
+            this.transform.LookAt(Target.transform.position+Offset);
             this.transform.position += (Vector3)(Matrix4x4.Rotate(this.transform.rotation) * (Vector4)(Vector3.forward * speed));
         }
     }
