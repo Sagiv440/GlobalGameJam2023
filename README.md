@@ -6,7 +6,8 @@ This Game was Created in **Global GameJam 2023**.
 A link to the Game Page [**Crusader Legacy**](https://globalgamejam.org/2023/games/crusader-legacy-1)
 
 # Description
-It is a Tower Attack Game where you send the your job as a commander is to get your soldiers through the Enemy fortifications.
+It is a Tower Attack Game where your job as a commander is to get your soldiers through the Enemy fortifications.
+
 You do that by selecting an army based on the traits and skills that they have inherited from there past relatives.
 
 # Screen Shots
